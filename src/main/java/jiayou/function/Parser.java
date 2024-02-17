@@ -43,6 +43,7 @@ public class Parser {
             String content = parts.length > 1 ? parts[1] : "";
 
             switch (command) {
+<<<<<<< HEAD
                 case LIST:
                     return tasks.printList();
                 case HELP:
@@ -183,7 +184,11 @@ public class Parser {
         try {
             if (input.isEmpty()) {
                 throw new JiayouException("OOPS!!! I don't know which task to mark.\n"
+<<<<<<< HEAD
                         + "Please add the id(s) after the keyword mark!");
+=======
+                    + "Please add the id(s) after the keyword mark!");
+>>>>>>> master
             }
 
             String[] taskIds = input.split(" ");
