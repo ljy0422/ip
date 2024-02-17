@@ -18,6 +18,7 @@ import jiayou.function.Jiayou;
  * Controller for MainWindow. Provides the layout for the other controls.
  */
 public class MainWindow extends AnchorPane {
+    private static final String SIGN_OF_ERROR = "OOPS!!!";
     @FXML
     private ScrollPane scrollPane;
     @FXML
@@ -27,7 +28,7 @@ public class MainWindow extends AnchorPane {
     private Jiayou jiayou;
     private Image userImage = new Image(this.getClass().getResourceAsStream("/images/JiaUser.PNG"));
     private Image jiayouImage = new Image(this.getClass().getResourceAsStream("/images/JiaJiayou.PNG"));
-    private static final String SIGN_OF_ERROR = "OOPS!!!";
+
     /**
      * Initializes the main window and prints out the greeting message.
      */

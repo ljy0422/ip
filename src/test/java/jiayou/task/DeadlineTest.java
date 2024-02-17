@@ -26,4 +26,15 @@ public class DeadlineTest {
         Deadline deadline = new Deadline("Watch movies", "2020-01-01");
         assertEquals(description, deadline.getDescription());
     }
+
+    @Test
+    public void testEquals() {
+        Deadline deadline = new Deadline("Watch movies", "2020-01-01");
+        Deadline deadlineSame = new Deadline("Watch movies", "2020-01-01");
+        Deadline deadlineDiffDesc = new Deadline("Watch", "2020-01-01");
+        Deadline deadlineDiffBy = new Deadline("Watch", "2020-02-01");
+        assertEquals(true, deadline.equals(deadlineSame));
+        assertEquals(false, deadline.equals(deadlineDiffBy));
+        assertEquals(false, deadline.equals(deadlineDiffDesc));
+    }
 }

@@ -25,4 +25,17 @@ public class EventTest {
         Event event = new Event("Complete homework", "2010-01-01", "2020-01-01");
         assertEquals(description, event.getDescription());
     }
+
+    @Test
+    public void testEquals() {
+        Event event = new Event("Complete homework", "2010-01-01", "2020-01-01");
+        Event eventSame = new Event("Complete homework", "2010-01-01", "2020-01-01");
+        Event eventDiffDesc = new Event("Complete", "2010-01-01", "2020-01-01");
+        Event eventDiffFrom = new Event("Complete homework", "2010-01-02", "2020-01-01");
+        Event eventDiffTo = new Event("Complete homework", "2010-01-01", "2020-02-01");
+        assertEquals(true, event.equals(eventSame));
+        assertEquals(false, event.equals(eventDiffDesc));
+        assertEquals(false, event.equals(eventDiffFrom));
+        assertEquals(false, event.equals(eventDiffTo));
+    }
 }
